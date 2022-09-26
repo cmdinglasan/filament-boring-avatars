@@ -1,6 +1,6 @@
 # Filament Boring Avatars
 
-![Filament Boring Avatars Banner](https://banners.beyondco.de/Filament%20Boring%20Avatars.png?theme=light&packageManager=composer+require&packageName=vendor%2Fmy-awesome-package&pattern=architect&style=style_2&description=Use+Boring+Avatars+as+Filament+User+Avatars&md=0&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
+![Filament Boring Avatars Banner](https://banners.beyondco.de/Filament%20Boring%20Avatars.png?theme=light&packageManager=composer+require&packageName=cmdinglasan%2Ffilament-boring-avatars&pattern=architect&style=style_2&description=Use+Boring+Avatars+as+Filament+User+Avatars&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cmdinglasan/filament-boring-avatars.svg?style=flat-square)](https://packagist.org/packages/cmdinglasan/filament-boring-avatars)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/cmdinglasan/filament-boring-avatars/run-tests?label=tests)](https://github.com/cmdinglasan/filament-boring-avatars/actions?query=workflow%3Arun-tests+branch%3Amain)
