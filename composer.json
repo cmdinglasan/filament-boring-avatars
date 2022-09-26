@@ -1,23 +1,25 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "cmdinglasan/filament-boring-avatars",
+    "description": "Change the default avatar URL provider for Filament to one from Boring Avatars.",
     "keywords": [
-        ":vendor_name",
         "laravel",
-        ":package_slug"
+        "filament-boring-avatars",
+        "boring-avatars",
+        "filament"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/cmdinglasan/filament-boring-avatars",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Christian Dinglasan",
+            "email": "dinglasanchristian@outlook.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.13.0",
+        "php": "^8.0.2",
+        "filament/filament": "^2.0",
+        "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0"
     },
     "require-dev": {
@@ -30,18 +32,16 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Cmdinglasan\\FilamentBoringAvatars\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Cmdinglasan\\FilamentBoringAvatars\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,15 +51,19 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Cmdinglasan\\FilamentBoringAvatars\\FilamentBoringAvatarsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentBoringAvatars": "Cmdinglasan\\FilamentBoringAvatars\\Facades\\FilamentBoringAvatars"
             }
         }
     },
