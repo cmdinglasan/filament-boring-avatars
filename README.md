@@ -43,7 +43,7 @@ return [
 
 ## Usage
 
-Inside the Filament `config.php` file, change the `avatar_url_provider` to `BoringAvatarsAvatarUrlProvider::class`.
+Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class`.
 
 ```php
 /*
