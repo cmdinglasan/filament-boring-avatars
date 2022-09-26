@@ -56,7 +56,7 @@ Inside the Filament `config.php` file, change the `avatar_url_provider` to `Bori
 |
 */
 
-'default_avatar_provider' => Cmdinglasan\FilamentBoringAvatars\FilamentBoringAvatarsServiceProvider::class,
+'default_avatar_provider' => Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class,
 ```
 
 ## Testing
