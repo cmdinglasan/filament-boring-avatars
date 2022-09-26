@@ -2,21 +2,19 @@
 
 namespace Cmdinglasan\FilamentBoringAvatars;
 
-use Exception;
 use Illuminate\Support\Str;
 
 class BoringAvatars
 {
     /**
      * Get the avatar URL from the Boring Avatars API.
-     * 
-     * @param string $name          The name of the user.
-     * @param string $variant       The variant of the avatar.
-     * @param string $size          The size of the avatar.
-     * @param array $colors        The colors of the avatar.
-     * 
+     *
+     * @param  string  $name          The name of the user.
+     * @param  string  $variant       The variant of the avatar.
+     * @param  int  $size          The size of the avatar.
+     * @param  array  $colors        The colors of the avatar.
      * @return string               The URL of the avatar.
-     * 
+     *
      * @source https://github.com/boringdesigners/boring-avatars
      */
     public static function get(
@@ -26,7 +24,6 @@ class BoringAvatars
         array $colors = [],
         string $url = 'https://source.boringavatars.com'
     ): string {
-
         $name = Str::of($name)
             ->trim()
             ->explode(' ')
@@ -37,7 +34,7 @@ class BoringAvatars
 
         $imageUrl = "{$url}/{$variant}/{$size}/{$name}";
 
-        if(!empty($colors)) {
+        if (! empty($colors)) {
             $imageUrl .= "?colors={$colors}";
         }
 
@@ -46,16 +43,15 @@ class BoringAvatars
 
     /**
      * Convert colors array to string.
-     * 
-     * @param array $colors        The colors of the avatar.
-     * 
+     *
+     * @param  array  $colors        The colors of the avatar.
      * @return string               The URL of the avatar.
      */
     private static function getColors(array $colors): string
     {
         if (is_array($colors)) {
             $colors = collect($colors)->map(function ($color) {
-                if(Str::startsWith($color, '#')) {
+                if (Str::startsWith($color, '#')) {
                     return str_replace('#', '', $color);
                 }
             })->toArray();
@@ -64,7 +60,5 @@ class BoringAvatars
 
             return $colors;
         }
-
-        return throw new Exception('Colors must be an array.');
     }
 }

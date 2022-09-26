@@ -2,9 +2,9 @@
 
 namespace Cmdinglasan\FilamentBoringAvatars\Tests;
 
+use Cmdinglasan\FilamentBoringAvatars\FilamentBoringAvatarsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Cmdinglasan\FilamentBoringAvatars\FilamentBoringAvatarsServiceProvider;
 
 class TestCase extends Orchestra
 {

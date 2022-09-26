@@ -2,7 +2,6 @@
 
 namespace Cmdinglasan\FilamentBoringAvatars;
 
-use Filament\Facades\Filament;
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 

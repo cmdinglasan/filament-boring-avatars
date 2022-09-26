@@ -2,12 +2,10 @@
 
 namespace Cmdinglasan\FilamentBoringAvatars\AvatarProviders;
 
-use Illuminate\Support\Str;
+use Cmdinglasan\FilamentBoringAvatars\BoringAvatars;
+use Filament\AvatarProviders\Contracts\AvatarProvider;
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
-use Cmdinglasan\FilamentBoringAvatars\BoringAvatars;
-use Exception;
-use Filament\AvatarProviders\Contracts\AvatarProvider;
 
 class UiAvatarsProvider implements AvatarProvider
 {

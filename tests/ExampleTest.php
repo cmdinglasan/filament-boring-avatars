@@ -25,7 +25,7 @@ it('has correct colors array', function () {
         'John Doe',
         'marble',
         40,
-        ['#264653','#2a9d8f','#e9c46a','#f4a261','#e76f51'],
+        ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'],
     );
 
     expect($url)->toBe('https://source.boringavatars.com/marble/40/J+D?colors=264653,2a9d8f,e9c46a,f4a261,e76f51');
