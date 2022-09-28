@@ -9,6 +9,12 @@
 
 Change the default avatar URL provider for Filament to one from Boring Avatars.
 
+## Why choose this plugin?
+
+> Boring avatars is a tiny JavaScript React library that generates custom, SVG-based avatars from any username and color palette.
+
+This plugin uses the [Boring Avatar](https://github.com/boringdesigners/boring-avatars) API to get generated user avatars. Only the initials of the Filament User's name are submitted to the API.
+
 ## Installation
 
 You can install the package via composer:
