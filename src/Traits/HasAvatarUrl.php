@@ -2,7 +2,7 @@
 
 namespace Cmdinglasan\FilamentBoringAvatars\Traits;
 
-use Cmdinglasan\FilamentBoringAvatars\FilamentBoringAvatarsServiceProvider;
+use Cmdinglasan\FilamentBoringAvatars\BoringAvatars;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait HasAvatarUrl
@@ -10,7 +10,7 @@ trait HasAvatarUrl
     public function avatarUrl(): Attribute
     {
         return new Attribute(
-            get: fn () => (new FilamentBoringAvatarsServiceProvider())->get($this)
+            get: fn () => app()->make(BoringAvatars::class)->get($this)
         );
     }
 }
