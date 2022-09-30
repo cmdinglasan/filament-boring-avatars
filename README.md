@@ -65,6 +65,8 @@ Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdi
 'default_avatar_provider' => Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class,
 ```
 
+to use this outside Filament just add the `HasAvatarUrl` trait to your User Model
+
 ## Testing
 
 ```bash
