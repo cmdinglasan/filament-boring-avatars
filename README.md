@@ -47,7 +47,8 @@ return [
 ];
 ```
 
-## Usage
+## How to use
+### 1. In Filament
 
 Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class`.
 
@@ -65,7 +66,27 @@ Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdi
 'default_avatar_provider' => Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class,
 ```
 
-to use this outside Filament just add the `HasAvatarUrl` trait to your User Model
+### 2. Inside your own PHP / Laravel app
+
+To use this outside of Filament, just add the `HasAvatarUrl` trait to your models.
+
+```php
+<?php
+
+namespace App\Models;
+
+use Cmdinglasan\FilamentBoringAvatars\Traits\HasAvatarUrl;
+
+class User
+{
+    use HasAvatarUrl;
+}
+```
+Then just call it using the `avatarUrl()` method.
+
+```php
+$user = User::find(1)->avatarUrl();
+```
 
 ## Testing
 
@@ -77,17 +98,10 @@ composer test
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
 - [Christian Dinglasan](https://github.com/cmdinglasan)
+- [Giacomo Trezzi](https://github.com/G3z)
 - [All Contributors](../../contributors)
 
 ## License
