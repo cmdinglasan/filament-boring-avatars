@@ -82,6 +82,36 @@ class User
     use HasAvatarUrl;
 }
 ```
+
+In the model, use the model's name attribute or add a `name` attribute.
+
+```php
+// Example for getAttribute:
+public function getNameAttribute()
+{
+    return $this->first_name . ' ' . $this->last_name;
+}
+
+// Example using accessor
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    /**
+     * Get the user's name
+     *
+     * @return Attribute
+     */
+    protected function name(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->first_name . ' ' . $this->last_name,
+        );
+    }
+}
+```    
+
 Then just call it using the `avatarUrl` property.
 
 ```php
