@@ -2,6 +2,10 @@
 
 All notable changes to `filament-boring-avatars` will be documented in this file.
 
+## v1.1.1 - 2022-10-02
+
+- Fixed docs
+
 ## v1.1.0 - 2022-10-02
 
 Updated trait to use package outside of Filament
