@@ -82,10 +82,10 @@ class User
     use HasAvatarUrl;
 }
 ```
-Then just call it using the `avatarUrl()` method.
+Then just call it using the `avatarUrl` property.
 
 ```php
-$user = User::find(1)->avatarUrl();
+$user = User::find(1)->avatarUrl;
 ```
 
 ## Testing
