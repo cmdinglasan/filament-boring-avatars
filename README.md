@@ -66,9 +66,9 @@ Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdi
 'default_avatar_provider' => Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class,
 ```
 
-### 2. Inside your own PHP / Laravel app
+### 2. Inside your own Laravel app
 
-To use this outside of Filament, just add the `HasAvatarUrl` trait to your models.
+To use this inside your Laravel app, just add the `HasAvatarUrl` trait to your models.
 
 ```php
 <?php
@@ -89,6 +89,8 @@ $user = User::find(1)->avatarUrl();
 ```
 
 ## Testing
+
+This package uses PestPHP for testing. To run the tests, run the following command:
 
 ```bash
 composer test
