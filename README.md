@@ -48,6 +48,7 @@ return [
 ```
 
 ## How to use
+
 ### 1. In Filament
 
 Inside the Filament `config.php` file, change the `avatar_url_provider` to `Cmdinglasan\FilamentBoringAvatars\AvatarProviders\UiAvatarsProvider::class`.
@@ -82,10 +83,40 @@ class User
     use HasAvatarUrl;
 }
 ```
-Then just call it using the `avatarUrl()` method.
+
+In the model, use the model's name attribute or add a `name` attribute.
 
 ```php
-$user = User::find(1)->avatarUrl();
+// Example for getAttribute:
+public function getNameAttribute()
+{
+    return $this->first_name . ' ' . $this->last_name;
+}
+
+// Example using accessor
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    /**
+     * Get the user's name
+     *
+     * @return Attribute
+     */
+    protected function name(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->first_name . ' ' . $this->last_name,
+        );
+    }
+}
+```
+
+Then just call it using the `avatarUrl` property.
+
+```php
+$user = User::find(1)->avatarUrl;
 ```
 
 ## Testing
@@ -102,9 +133,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Christian Dinglasan](https://github.com/cmdinglasan)
-- [Giacomo Trezzi](https://github.com/G3z)
-- [All Contributors](../../contributors)
+-   [Christian Dinglasan](https://github.com/cmdinglasan)
+-   [Giacomo Trezzi](https://github.com/G3z)
+-   [All Contributors](../../contributors)
 
 ## License
 
