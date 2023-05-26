@@ -110,7 +110,7 @@ class User extends Model
         );
     }
 }
-```    
+```
 
 Then just call it using the `avatarUrl` property.
 
@@ -132,9 +132,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Christian Dinglasan](https://github.com/cmdinglasan)
-- [Giacomo Trezzi](https://github.com/G3z)
-- [All Contributors](../../contributors)
+-   [Christian Dinglasan](https://github.com/cmdinglasan)
+-   [Giacomo Trezzi](https://github.com/G3z)
+-   [All Contributors](../../contributors)
 
 ## License
 
