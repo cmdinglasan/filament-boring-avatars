@@ -9,6 +9,11 @@
 
 Change the default avatar URL provider for Filament to one from Boring Avatars.
 
+## Notice
+This package is made for Filament v2. **This package doesn't support Filament v3.** 
+
+For Filament v3, see the Boring Avatars implementation and setup of a different avatar provider in the [Filament v3 Docs](https://filamentphp.com/docs/3.x/panels/users#using-a-different-avatar-provider). 
+
 ## Why choose this plugin?
 
 > Boring avatars is a tiny JavaScript React library that generates custom, SVG-based avatars from any username and color palette.
